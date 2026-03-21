@@ -1,18 +1,14 @@
 ---
-layout: page
+layout: default
 title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+# About The Network Entropologist
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+***The Network Entropologist (n):*** part engineer, part diagnostician, part archaeologist of other 
+people's decisions. Reaches for the right tool, and builds it when it doesn't exist yet. Found most 
+naturally at 02:00 in a datacentre, Sharpie in hand, making sense of something that has quietly been 
+unravelling for years.
 
 
-[jekyll-organization]: https://github.com/jekyll

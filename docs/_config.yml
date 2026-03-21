@@ -21,19 +21,21 @@
 title: The Network Entropologist
 email: dnr@netropologist.dev
 description: >- # this means to ignore newlines until "baseurl:"
-  The Network Entroplogist is a blog about network security, privacy, and the internet. It is written by a network security researcher and privacy advocate.
+  Network engineer, Python enthusiast and observer of digital entropy. Fortinet | Cisco | NetBox. Bringing order to network entropy.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
-# github_username:  jekyll
+github_username:  NetworkEntropologist
 
 # Build settings
 # theme: minima
-remote_theme: pages-themes/minimal@v0.2.0
+remote_theme: NetworkEntropologist/jekyll-theme-bootstrap-minimal
 plugins:
 - jekyll-remote-theme
 # plugins:
   # - jekyll-feed
+
+logo: /assets/img/logo-graphic-light.png
 
 # Exclude from processing.
 # The following items will not be processed, by default.
