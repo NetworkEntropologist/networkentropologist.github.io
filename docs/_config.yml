@@ -19,9 +19,12 @@
 # in the templates via {{ site.myvariable }}.
 
 title: The Network Entropologist
-email: dnr@netropologist.dev
+author: The Network Entropologist
+email: 
 description: >- # this means to ignore newlines until "baseurl:"
-  Network engineer, Python enthusiast and observer of digital entropy. Fortinet | Cisco | NetBox. Bringing order to network entropy.
+  <strong>Network Entropology (n.):</strong> The study of chaos in data network systems; the discipline concerned with 
+          understanding how order degrades, complexity accumulates, and entropy propagates across connected infrastructure, 
+          and the practice of bringing order back to it. A field that exists whether or not its practitioners know they are in it.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
@@ -35,7 +38,23 @@ plugins:
 # plugins:
   # - jekyll-feed
 
+permalink: /:year/:month/:day/:title:output_ext
+
 logo: /assets/img/logo-graphic-light.png
+
+# Edit your optional site keywords here, separated by commas. These are used in the meta tag for search engines.
+keywords: 
+
+# The relative path to the site favicon
+favicon: 
+
+# The relative path to the Applie Touch Icon
+apple_touch_icon:
+
+# These options control visibility of various elements in the theme.
+show_sidebar: true
+show_footer: true
+show_menu: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.
