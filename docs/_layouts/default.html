@@ -26,89 +26,200 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
-    <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" href="/assets/css/tne-override.css">
+    <link rel="stylesheet" href="/assets/css/rouge-github.css">
+    <link rel="stylesheet" href="/assets/css/fonts.css">
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
 
-    {% include head-custom.html %}
   </head>
 
   <body>
 
-    <div class="container" id="BodyContainer">
+    <div class="container" id="MainBody">
 
-      <main class="container" id="MainBodyContainer">
+        <header id="Header" class="position-sticky bg-secondary rounded shadow" style="top: 0; z-index: 1020;">
 
-        <div class="row g-5" id="BodyGridContainer">
-          
-          <div class="col-md-3 position-sticky border rounded bg-light" style="top: 2rem;" id="Sidebar">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#"><img src="https://webassets.hbnet.tech/logos/tne/logo-dark-design.png" width="200"/>The Network Entropologist</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            {% include menu.html %}
+                            <!-- <li class="nav-item"><a class="nav-link text-secondary" href="#">Link</a></li> -->
+                        </ul>
+                        <!-- <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                            <button class="btn btn-outline" type="submit"><i class="bi bi-search"></i></button>
+                        </form> -->
+                        </div>
+                    </div>
+                </nav>
 
-            <div class="position-sticky" style="top: 2rem;" id="StickyWrapper">
-              
-              <h1 class="p-2"><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
+        </header>
 
-                {% if site.logo %}
-                  <img class="img-fluid" src="{{site.logo | relative_url}}" alt="Logo" />
-                {% endif %}
+        <!-- Main Content -->
 
-                <p class="p-2">{{ site.description | default: site.github.project_tagline }}</p>
+        <main class="container" id="MainBodyContainer">
 
-                {% if site.show_menu %}
-                  {% include menu.html %}
-                {% endif %}
+          {% if site.show_headline %}
+            <div class="p-2 p-md-5 mb-4 text-white headline-bg rounded shadow" id="HeadlinePost">
+                <div class="px-0">
+                    <h1 class="display-4 text-primary">Fancy featured blog post</h1>
+                    <div class="mb-1 text-light">99 Julember 4596</div>
+                    <p class="lead my-3 text-dark">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, urna at tincidunt feugiat, 
+                        justo sapien laoreet nisl, sit amet aliquam lectus odio nec nulla. Curabitur vel sapien nec justo 
+                        tincidunt ullamcorper.
+                    </p>
+                    <p class="lead mb-8">
+                        <a href="#" class="text-dark fw-bold">Continue reading...</a>
+                    </p>
+                </div>
+            </div> <!-- End HeadlinePost-->
+          {% endif %}
 
-                <p>Socials:</p>
-                <ul class="list-unstyled d-flex gap-3">
-                    <li><a href="https://github.com/NetworkEntropologist" target="_blank"><i class="bi bi-github"></i></a></li>
-                    <!-- <li><a href="#" target="_blank"><i class="bi bi-linkedin"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="bi bi-twitter"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="bi bi-stack-overflow"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="bi bi-journal-code"></i></a></li> -->
-                </ul>
+          {% if site.show_featured %}
+            <div class="row mb-2" id="FeaturedPosts">
 
-                <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="thenetworkentropologist" data-color="#FFDD00" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script>
-                
-                <!-- {% if site.github.is_project_page %}
-                  <p class="mb-8 "><a href="{{ site.github.repository_url }}">View the Project on GitHub <small>{{ site.github.repository_nwo }}</small></a></p>
-                {% endif %} -->
+                <div class="col-md-6" id="FeaturedPost1">
+                    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow h-md-250 position-relative">
+                        <div class="col p-4 d-flex flex-column position-static">
+                            <strong class="d-inline-block mb-2 text-muted">Technology</strong>
+                            <h3 class="mb-0">Featured Post</h3>
+                            <div class="mb-1 text-secondary">17 October 2023</div>
+                            <p class="card-text mb-auto">Exercitation eiusmod elit nisi ullamco sunt tempor ex qui ex in proident esse.</p>
+                            <a href="#" class="stretched-link">Continue reading...</a>
+                        </div>
+                        <div class="col-auto d-none d-lg-block">
+                            <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" 
+                            aria-label="Placeholder: Thumbnail" presrveAspectRatio="xMidyMid slice" focusable="false">
+                                <title>Placeholder</title><rect width="100%" height=""100% fill="#55595c" />
+                                <text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
 
-                {% if site.show_downloads %}
-                  <ul class="downloads">
-                    <li><a href="{{ site.github.zip_url }}">Download <strong>ZIP File</strong></a></li>
-                    <li><a href="{{ site.github.tar_url }}">Download <strong>TAR Ball</strong></a></li>
-                    <li><a href="{{ site.github.repository_url }}">View On <strong>GitHub</strong></a></li>
-                  </ul>
-                {% endif %}
+                <div class="col-md-6" id="FeaturedPost2">
+                    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow h-md-250 position-relative">
+                        <div class="col p-4 d-flex flex-column position-static">
+                            <strong class="d-inline-block mb-2 text-muted">World</strong>
+                            <h3 class="mb-0">Featured Post</h3>
+                            <div class="mb-1 text-secondary">12 November 2023</div>
+                            <p class="card-text mb-auto">Eu ipsum adipisicing laboris eu voluptate adipisicing excepteur proident aute.</p>
+                            <a href="#" class="stretched-link">Continue reading...</a>
+                        </div>
+                        <div class="col-auto d-none d-lg-block">
+                            <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" 
+                            aria-label="Placeholder: Thumbnail" presrveAspectRatio="xMidyMid slice" focusable="false">
+                                <title>Placeholder</title><rect width="100%" height=""100% fill="#55595c" />
+                                <text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
 
-            </div> <!-- #StickyWrapper -->
+            </div> <!-- End FeaturedPosts -->
+          {% endif %}
 
-          </div> <!-- #Sidebar -->
+            <div class="row g-5" id="MainPageContent">
 
-          <div class="col-md-9" id="Content">
-            {{ content }}
-          </div> <!-- #Content -->
+                <div class="col-md-8 py-3" id="MainPostWindow">
+                  
+                    {{ content }}
 
-        </div> <!-- #BodyGridContainer -->
+                </div> <!-- End MainPostWindow-->
 
-      </main> <!-- #MainBodyContainer -->
-      
-      <!-- <footer>
-        {% if site.github.is_project_page %}
-        <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
-        {% endif %}
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer> -->
+                <div class="col-md-4 position-sticky d-none d-md-block py-3" id="Sidebar">
+                    <div class="position-sticky  border rounded shadow">
+                        <div class="p-4 mb-3" id=""About>
+                            <h4>About</h4>
+                            <p class="mb-8">
+                                <strong>Network Entropology (n.):</strong> The study of chaos in data network systems; the discipline concerned with 
+                                understanding how order degrades, complexity accumulates, and entropy propagates across connected infrastructure, 
+                                and the practice of bringing order back to it. A field that exists whether or not its practitioners know they are in it.
+                            </p>
+                            <ul class="list-unstyled d-flex gap-3">
+                                <li><a href="#" target="_blank"><i class="bi bi-github"></i></a></li>
+                                <!-- <li><a href="#" target="_blank"><i class="bi bi-linkedin"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="bi bi-twitter"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="bi bi-stack-overflow"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="bi bi-journal-code"></i></a></li> -->
+                            </ul>
 
+                        </div> <!-- End About -->
+                        <!-- <div class="p-4">
+                            <h4>Archive</h4>
+                            <ol class="list-unstyled">
+                                <li><a href="#"> January 3582</a> (77)</li>
+                                <li><a href="#"> September 2023</a> (3)</li>
+                                <li><a href="#"> August 2023</a> (2)</li>
+                            </ol>
+                        </div> End Archive -->
+                    </div> <!-- End Sticky Wrapper -->
+                </div> <!-- End of Sidebar -->
 
-    </div> <!-- #BodyContainer -->
+            </div> <!-- End MainPageContent-->
 
-      
+        </main> <!-- End MainBodyContainer-->
 
-    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
-  </body>
+        <footer class="text-secondary" id="MainFooter">
+            
+            
+            <div class="container copyright text-center mt-4">
+                <p>© <span>Copyright</span> <strong class="px-1 sitename">The Network Entropologist</strong> <span>All Rights Reserved</span></p>
+            </div>
+
+        </footer> <!-- End MainFooter -->
+
+    </div> <!-- End MainBody -->
+
+    <!-- <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a> -->
+
+    <script>
+    // Calculate navbar height and set sticky sidebar offset
+    function updateSidebarPosition() {
+        const navbar = document.querySelector('nav');
+        const sidebar = document.querySelector('#Sidebar');
+        const sidebarSticky = sidebar?.querySelector('.position-sticky');
+        if (navbar && sidebar) {
+            const navHeight = navbar.offsetHeight + 'px';
+            sidebar.style.top = navHeight;
+            if (sidebarSticky) {
+                sidebarSticky.style.top = navHeight;
+            }
+        }
+    }
+    
+    // Set initial position
+    updateSidebarPosition();
+    
+    // Recalculate on window resize
+    window.addEventListener('resize', updateSidebarPosition);
+    </script>
+
+    <script>
+    // Set active menu item
+    document.addEventListener('DOMContentLoaded', function() {
+        const currentPath = window.location.pathname;
+        const menuLinks = document.querySelectorAll('.nav-link');
+        menuLinks.forEach(link => {
+            if (link.getAttribute('href') === currentPath) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+    });
+    </script>
+
+</body>
+
 </html>

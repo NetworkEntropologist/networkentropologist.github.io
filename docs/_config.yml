@@ -32,9 +32,9 @@ github_username:  NetworkEntropologist
 
 # Build settings
 # theme: minima
-remote_theme: NetworkEntropologist/jekyll-theme-bootstrap-minimal
-plugins:
-- jekyll-remote-theme
+# remote_theme: pages-themes/minimal
+# plugins:
+# - jekyll-remote-theme
 # plugins:
   # - jekyll-feed
 
@@ -55,6 +55,8 @@ apple_touch_icon:
 show_sidebar: true
 show_footer: true
 show_menu: true
+show_headline: false
+show_featured: false
 
 # Exclude from processing.
 # The following items will not be processed, by default.
