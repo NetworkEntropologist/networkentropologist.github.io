@@ -30,9 +30,9 @@
     <link rel="stylesheet" href="/assets/css/rouge-github.css">
     <link rel="stylesheet" href="/assets/css/fonts.css">
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>    
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
 
   </head>
@@ -45,14 +45,29 @@
 
                 <nav class="navbar navbar-expand-lg">
                     <div class="container-fluid">
-                        <a class="navbar-brand" href="#"><img src="https://webassets.hbnet.tech/logos/tne/logo-dark-design.png" width="200"/>The Network Entropologist</a>
+                        <a class="navbar-brand" href="{{ '/' | relative_url }}"><img src="https://webassets.hbnet.tech/logos/tne/logo-dark-design.png" width="200"/>The Network Entropologist</a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            {% include menu.html %}
-                            <!-- <li class="nav-item"><a class="nav-link text-secondary" href="#">Link</a></li> -->
+                            
+                            {% for item in site.data.menu.items %}
+                            <li class="nav-item"><a class="nav-link" href="{{ item.url }}">{{ item.title }}</a></li>
+                            {% endfor %}
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="tagsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Categories
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="tagsDropdown">
+                                    <li><a class="dropdown-item" href="/posts">All Posts</a></li>
+                                    {% for tag in site.tags %}
+                                    <li><a class="dropdown-item" href="/tags#{{ tag[0] | slugify }}">{{ tag[0] }} ({{ tag[1].size }})</a></li>
+                                    {% endfor %}
+                                </ul>
+                            </li>
+
                         </ul>
                         <!-- <form class="d-flex" role="search">
                             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
@@ -68,77 +83,78 @@
 
         <main class="container" id="MainBodyContainer">
 
-          {% if site.show_headline %}
-            <div class="p-2 p-md-5 mb-4 text-white headline-bg rounded shadow" id="HeadlinePost">
-                <div class="px-0">
-                    <h1 class="display-4 text-primary">Fancy featured blog post</h1>
-                    <div class="mb-1 text-light">99 Julember 4596</div>
-                    <p class="lead my-3 text-dark">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, urna at tincidunt feugiat, 
-                        justo sapien laoreet nisl, sit amet aliquam lectus odio nec nulla. Curabitur vel sapien nec justo 
-                        tincidunt ullamcorper.
-                    </p>
-                    <p class="lead mb-8">
-                        <a href="#" class="text-dark fw-bold">Continue reading...</a>
-                    </p>
-                </div>
-            </div> <!-- End HeadlinePost-->
-          {% endif %}
+            {% if site.show_headline %}
+                <div class="p-2 p-md-5 mb-4 text-white headline-bg rounded shadow" id="HeadlinePost">
+                    <div class="px-0">
+                        <h1 class="display-4 text-primary">Fancy featured blog post</h1>
+                        <div class="mb-1 text-light">99 Julember 4596</div>
+                        <p class="lead my-3 text-dark">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, urna at tincidunt feugiat, 
+                            justo sapien laoreet nisl, sit amet aliquam lectus odio nec nulla. Curabitur vel sapien nec justo 
+                            tincidunt ullamcorper.
+                        </p>
+                        <p class="lead mb-8">
+                            <a href="#" class="text-dark fw-bold">Continue reading...</a>
+                        </p>
+                    </div>
+                </div> <!-- End HeadlinePost-->
+            {% endif %}
 
-          {% if site.show_featured %}
-            <div class="row mb-2" id="FeaturedPosts">
+            {% if site.show_featured %}
+                <div class="row mb-2" id="FeaturedPosts">
 
-                <div class="col-md-6" id="FeaturedPost1">
-                    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow h-md-250 position-relative">
-                        <div class="col p-4 d-flex flex-column position-static">
-                            <strong class="d-inline-block mb-2 text-muted">Technology</strong>
-                            <h3 class="mb-0">Featured Post</h3>
-                            <div class="mb-1 text-secondary">17 October 2023</div>
-                            <p class="card-text mb-auto">Exercitation eiusmod elit nisi ullamco sunt tempor ex qui ex in proident esse.</p>
-                            <a href="#" class="stretched-link">Continue reading...</a>
-                        </div>
-                        <div class="col-auto d-none d-lg-block">
-                            <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" 
-                            aria-label="Placeholder: Thumbnail" presrveAspectRatio="xMidyMid slice" focusable="false">
-                                <title>Placeholder</title><rect width="100%" height=""100% fill="#55595c" />
-                                <text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>
-                            </svg>
+                    <div class="col-md-6" id="FeaturedPost1">
+                        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow h-md-250 position-relative">
+                            <div class="col p-4 d-flex flex-column position-static">
+                                <strong class="d-inline-block mb-2 text-muted">Technology</strong>
+                                <h3 class="mb-0">Featured Post</h3>
+                                <div class="mb-1 text-secondary">17 October 2023</div>
+                                <p class="card-text mb-auto">Exercitation eiusmod elit nisi ullamco sunt tempor ex qui ex in proident esse.</p>
+                                <a href="#" class="stretched-link">Continue reading...</a>
+                            </div>
+                            <div class="col-auto d-none d-lg-block">
+                                <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" 
+                                aria-label="Placeholder: Thumbnail" presrveAspectRatio="xMidyMid slice" focusable="false">
+                                    <title>Placeholder</title><rect width="100%" height=""100% fill="#55595c" />
+                                    <text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>
+                                </svg>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-md-6" id="FeaturedPost2">
-                    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow h-md-250 position-relative">
-                        <div class="col p-4 d-flex flex-column position-static">
-                            <strong class="d-inline-block mb-2 text-muted">World</strong>
-                            <h3 class="mb-0">Featured Post</h3>
-                            <div class="mb-1 text-secondary">12 November 2023</div>
-                            <p class="card-text mb-auto">Eu ipsum adipisicing laboris eu voluptate adipisicing excepteur proident aute.</p>
-                            <a href="#" class="stretched-link">Continue reading...</a>
-                        </div>
-                        <div class="col-auto d-none d-lg-block">
-                            <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" 
-                            aria-label="Placeholder: Thumbnail" presrveAspectRatio="xMidyMid slice" focusable="false">
-                                <title>Placeholder</title><rect width="100%" height=""100% fill="#55595c" />
-                                <text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>
-                            </svg>
+                    <div class="col-md-6" id="FeaturedPost2">
+                        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow h-md-250 position-relative">
+                            <div class="col p-4 d-flex flex-column position-static">
+                                <strong class="d-inline-block mb-2 text-muted">World</strong>
+                                <h3 class="mb-0">Featured Post</h3>
+                                <div class="mb-1 text-secondary">12 November 2023</div>
+                                <p class="card-text mb-auto">Eu ipsum adipisicing laboris eu voluptate adipisicing excepteur proident aute.</p>
+                                <a href="#" class="stretched-link">Continue reading...</a>
+                            </div>
+                            <div class="col-auto d-none d-lg-block">
+                                <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" 
+                                aria-label="Placeholder: Thumbnail" presrveAspectRatio="xMidyMid slice" focusable="false">
+                                    <title>Placeholder</title><rect width="100%" height=""100% fill="#55595c" />
+                                    <text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>
+                                </svg>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-            </div> <!-- End FeaturedPosts -->
-          {% endif %}
+                </div> <!-- End FeaturedPosts -->
+            {% endif %}
 
             <div class="row g-5" id="MainPageContent">
 
                 <div class="col-md-8 py-3" id="MainPostWindow">
-                  
+                
                     {{ content }}
 
                 </div> <!-- End MainPostWindow-->
 
                 <div class="col-md-4 position-sticky d-none d-md-block py-3" id="Sidebar">
                     <div class="position-sticky  border rounded shadow">
+
                         <div class="p-4 mb-3" id=""About>
                             <h4>About</h4>
                             <p class="mb-8">
@@ -155,14 +171,28 @@
                             </ul>
 
                         </div> <!-- End About -->
-                        <!-- <div class="p-4">
+
+                        <div id="Archive" class="p-4">
                             <h4>Archive</h4>
-                            <ol class="list-unstyled">
-                                <li><a href="#"> January 3582</a> (77)</li>
-                                <li><a href="#"> September 2023</a> (3)</li>
-                                <li><a href="#"> August 2023</a> (2)</li>
-                            </ol>
-                        </div> End Archive -->
+                            {% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" | reverse %}
+                            {% for year_group in posts_by_year %}
+                            <h5>{{ year_group.name }}</h5>
+                            {% assign posts_by_month = year_group.items | group_by_exp: "post", "post.date | date: '%B'" %}
+                            <ul class="list-unstyled small">
+                                {% for month_group in posts_by_month %}
+                                <li><a class="text-decoration-none" href="/{{ year_group.name }}/{{ month_group.name | downcase }}/">{{ month_group.name }}</a> ({{ month_group.items.size }})</li>
+                                {% endfor %}
+                            </ul>
+                            {% endfor %}
+                        </div> <!-- End Archive -->
+
+                        <div class="d-flex flex-wrap gap-2 mb-4 p-4" id="TagCloud">
+                            {% for tag in site.tags %}
+                            <a href="/tags#{{ tag[0] | slugify }}" class="badge border border-secondary text-secondary text-decoration-none" style="font-size: {% if forloop.index <= 3 %}1.2{% elsif forloop.index <= 6 %}1rem{% else %}0.85{% endif %}rem;">
+                            {{ tag[0] }}
+                            </a>
+                            {% endfor %}
+                        </div>
                     </div> <!-- End Sticky Wrapper -->
                 </div> <!-- End of Sidebar -->
 
@@ -190,7 +220,7 @@
         const sidebar = document.querySelector('#Sidebar');
         const sidebarSticky = sidebar?.querySelector('.position-sticky');
         if (navbar && sidebar) {
-            const navHeight = navbar.offsetHeight + 'px';
+            const navHeight = navbar.offsetHeight + 15 + 'px';
             sidebar.style.top = navHeight;
             if (sidebarSticky) {
                 sidebarSticky.style.top = navHeight;
