@@ -2,7 +2,7 @@
 layout: post
 title: "Why I Started Walking Without Headphones"
 date: 2024-04-22 07:45:00 -0400
-tags: [mindfulness, habits, mental-health]
+categories: [mindfulness, habits, mental-health]
 ---
 
 For years, a walk without a podcast felt like wasted time. Now it's the part of my day I protect most.

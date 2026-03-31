@@ -2,7 +2,7 @@
 layout: post
 title: "Why I Switched from npm to pnpm"
 date: 2023-11-04 14:30:00 -0500
-tags: [javascript, tooling, npm, pnpm]
+categories: [javascript, tooling, npm, pnpm]
 ---
 
 After years of using npm (and a brief stint with Yarn), I switched to pnpm on all my projects about six months ago. Here's the short version of why I'm not going back.

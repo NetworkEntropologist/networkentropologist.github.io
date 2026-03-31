@@ -2,7 +2,7 @@
 layout: post
 title: "An Introduction to GitHub Actions for CI/CD"
 date: 2023-09-15 11:00:00 -0400
-tags: [github-actions, ci-cd, devops, automation]
+categories: [github-actions, ci-cd, devops, automation]
 ---
 
 GitHub Actions is one of the most developer-friendly CI/CD tools available today — mainly because it lives right where your code already does. No separate dashboard, no webhook setup, no third-party account.

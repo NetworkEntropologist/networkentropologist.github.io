@@ -2,7 +2,7 @@
 layout: post
 title: "Five VS Code Extensions I Use Every Day"
 date: 2023-06-28 08:45:00 -0400
-tags: [vscode, productivity, tooling, developer-experience]
+categories: [vscode, productivity, tooling, developer-experience]
 ---
 
 My VS Code setup has settled down a lot over the past year. Here are the five extensions that have genuinely stuck.

@@ -2,7 +2,7 @@
 layout: post
 title: "The Only Meal Prep Advice That Actually Stuck"
 date: 2023-05-14 12:30:00 -0400
-tags: [food, habits, productivity]
+categories: [food, habits, productivity]
 ---
 
 I've tried full Sunday meal prep three times. Each time I spent four hours cooking, ate the same thing until I hated it by Wednesday, and gave up by week three.

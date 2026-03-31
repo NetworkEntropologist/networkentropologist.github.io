@@ -2,7 +2,7 @@
 layout: post
 title: "The Books That Actually Changed How I Think"
 date: 2023-08-11 19:00:00 -0400
-tags: [books, reading, personal-growth, reflection]
+categories: [books, reading, personal-growth, reflection]
 ---
 
 I read a lot. Most of it washes over me. But occasionally a book genuinely shifts something — the way I make decisions, the way I talk to people, the way I understand myself. Here are five that did that for me.

@@ -2,7 +2,7 @@
 layout: post
 title: "The Case for Doing Nothing Deliberately"
 date: 2023-03-19 16:00:00 -0400
-tags: [mindfulness, rest, reflection, habits]
+categories: [mindfulness, rest, reflection, habits]
 ---
 
 I have a recurring item on my weekly review: **unscheduled time**. A block with nothing in it, no task attached, no podcast queued up, no plan. Just time that belongs to whatever I feel like doing — including nothing at all.

@@ -2,7 +2,7 @@
 layout: post
 title: "Two Weeks in Portugal: What I Wish I'd Known"
 date: 2024-07-18 09:00:00 -0400
-tags: [travel, europe, reflection]
+categories: [travel, europe, reflection]
 ---
 
 I spent two weeks in Portugal in June — a week in Lisbon, a few days in the Alentejo region, and a few days in Porto. Some things I'd read about; others caught me completely off guard.

@@ -2,7 +2,7 @@
 layout: post
 title: "Understanding Git Rebase vs Merge: When to Use Which"
 date: 2024-08-19 10:00:00 -0400
-tags: [git, version-control, workflow]
+categories: [git, version-control, workflow]
 ---
 
 Few topics in software development spark more heated discussion than `git rebase` vs `git merge`. Both integrate changes from one branch into another — but they do it differently, and the choice matters.

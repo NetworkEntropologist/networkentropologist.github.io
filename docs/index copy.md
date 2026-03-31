@@ -1,6 +1,6 @@
 ---
-layout: default
-title: About
+layout: index
+title: Home
 ---
 
 ## About This Site

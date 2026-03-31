@@ -2,7 +2,7 @@
 layout: post
 title: "Getting Started with Docker: A Practical Introduction"
 date: 2024-03-12 09:15:00 -0500
-tags: [docker, devops, containers, beginner]
+categories: [docker, devops, containers, beginner]
 ---
 
 If you've been hearing about Docker for a while but haven't taken the plunge, this post is for you. Docker is a platform that lets you package your application and all its dependencies into a standardised unit called a **container**. Containers are lightweight, portable, and consistent — which means if it runs on your machine, it'll run anywhere.

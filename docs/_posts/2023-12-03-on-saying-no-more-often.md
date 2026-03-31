@@ -2,7 +2,7 @@
 layout: post
 title: "On Saying No More Often"
 date: 2023-12-03 11:00:00 -0500
-tags: [boundaries, personal-growth, reflection, mental-health]
+categories: [boundaries, personal-growth, reflection, mental-health]
 ---
 
 I used to say yes to almost everything. Drinks I didn't want to go to, projects I didn't have capacity for, favours that cost me a full evening. I told myself it was generosity. I think it was mostly conflict avoidance.

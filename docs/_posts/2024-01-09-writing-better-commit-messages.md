@@ -2,7 +2,7 @@
 layout: post
 title: "Writing Better Commit Messages"
 date: 2024-01-09 16:20:00 -0500
-tags: [git, best-practices, workflow]
+categories: [git, best-practices, workflow]
 ---
 
 A good commit message is a gift to your future self. Here's the format I follow, loosely based on the [Conventional Commits](https://www.conventionalcommits.org/) spec:

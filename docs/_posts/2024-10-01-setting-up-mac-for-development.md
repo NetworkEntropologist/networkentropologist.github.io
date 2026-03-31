@@ -2,7 +2,7 @@
 layout: post
 title: "How I Set Up a New Mac for Development in 2024"
 date: 2024-10-01 09:30:00 -0400
-tags: [macos, setup, tooling, productivity, beginner]
+categories: [macos, setup, tooling, productivity, beginner]
 ---
 
 Every time I set up a new Mac I tweak the process a little. Here's my current approach — opinionated but efficient.

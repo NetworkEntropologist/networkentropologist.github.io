@@ -2,7 +2,7 @@
 layout: post
 title: "Six Months Without Social Media: An Honest Review"
 date: 2023-09-30 10:15:00 -0400
-tags: [digital-wellbeing, mental-health, lifestyle, reflection]
+categories: [digital-wellbeing, mental-health, lifestyle, reflection]
 ---
 
 In April I deleted Instagram, Twitter/X, and TikTok from my phone. Not deactivated — just removed the apps. The accounts still exist. I just made them inconvenient to access.

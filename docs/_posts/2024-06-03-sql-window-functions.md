@@ -2,7 +2,7 @@
 layout: post
 title: "SQL Window Functions Finally Make Sense"
 date: 2024-06-03 13:00:00 -0400
-tags: [sql, databases, backend]
+categories: [sql, databases, backend]
 ---
 
 Window functions were the SQL feature I avoided for years because the syntax looked intimidating. Then I actually learned them and realised I'd been writing unnecessarily convoluted subqueries for a decade.

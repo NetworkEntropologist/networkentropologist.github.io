@@ -2,7 +2,7 @@
 layout: post
 title: "One Year of Morning Pages: What I Actually Learned"
 date: 2024-02-07 08:00:00 -0500
-tags: [journaling, habits, mental-health, creativity]
+categories: [journaling, habits, mental-health, creativity]
 ---
 
 A year ago I started doing morning pages — three handwritten pages, first thing, no editing, no rereading. Julia Cameron recommends it in *The Artist's Way* as a way to clear mental clutter and unlock creativity. I was sceptical. I did it anyway.

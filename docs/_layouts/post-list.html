@@ -1,0 +1,72 @@
+---
+layout: default
+---
+
+
+{% assign posts = paginator.posts | default: site.posts | where_exp: "post", "post.draft != true" | sort: "date" | reverse %}
+
+<div class="post-list">
+  {% for post in posts %}
+    <article class="card mb-4 shadow">
+      <div class="card-body">
+        <h2 class="card-title h4 mb-2">
+          <a href="{{ post.url }}" class="text-decoration-none link-primary">{{ post.title }}</a>
+        </h2>
+        <small class="d-block mb-3 text-muted">
+          <span class="badge rounded-pill bg-secondary">{{ post.date | date: "%B %d, %Y" }}</span>
+        </small>
+        <p class="card-text">{{ post.excerpt }}</p>
+        <a href="{{ post.url }}" class="btn btn-sm btn-outline-primary">Read More</a>
+      </div>
+    </article>
+  {% endfor %}
+</div>
+
+<!-- Pagination links -->
+<nav aria-label="Blog pagination" class="mt-5">
+  <ul class="pagination justify-content-center">
+    {% if paginator.previous_page %}
+      <li class="page-item">
+        <a class="page-link" href="{{ paginator.previous_page_path }}" aria-label="Previous page">
+          ← Previous
+        </a>
+      </li>
+    {% else %}
+      <li class="page-item disabled">
+        <span class="page-link">← Previous</span>
+      </li>
+    {% endif %}
+
+    {% for page_num in (1..paginator.total_pages) %}
+      {% if page_num == paginator.page %}
+        <li class="page-item active" aria-current="page">
+          <span class="page-link">
+            {{ page_num }}
+            <span class="visually-hidden">(current)</span>
+          </span>
+        </li>
+      {% else %}
+        <li class="page-item">
+          {% if page_num == 1 %}
+            <a class="page-link" href="/">{{ page_num }}</a>
+          {% else %}
+            <a class="page-link" href="/page{{ page_num }}/">{{ page_num }}</a>
+          {% endif %}
+        </li>
+      {% endif %}
+    {% endfor %}
+
+    {% if paginator.next_page %}
+      <li class="page-item">
+        <a class="page-link" href="{{ paginator.next_page_path }}" aria-label="Next page">
+          Next →
+        </a>
+      </li>
+    {% else %}
+      <li class="page-item disabled">
+        <span class="page-link">Next →</span>
+      </li>
+    {% endif %}
+  </ul>
+</nav>
+

@@ -2,7 +2,7 @@
 layout: post
 title: "Stop Using console.log for Debugging"
 date: 2023-07-22 17:05:00 -0400
-tags: [javascript, debugging, productivity, developer-experience]
+categories: [javascript, debugging, productivity, developer-experience]
 ---
 
 `console.log` is fine. But leaning on it exclusively is leaving a lot of productivity on the table. Here are three better approaches I now use daily.

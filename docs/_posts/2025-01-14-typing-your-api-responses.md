@@ -2,7 +2,7 @@
 layout: post
 title: "The Case for Typing Your API Responses"
 date: 2025-01-14 12:00:00 -0500
-tags: [typescript, api, best-practices, backend]
+categories: [typescript, api, best-practices, backend]
 ---
 
 One of the most common sources of runtime bugs in TypeScript projects is untyped API responses. You call `fetch`, get back `any`, and TypeScript goes quiet — right when you need it most.

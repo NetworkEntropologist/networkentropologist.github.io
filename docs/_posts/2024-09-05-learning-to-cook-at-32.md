@@ -2,7 +2,7 @@
 layout: post
 title: "Learning to Cook Properly at 32"
 date: 2024-09-05 18:30:00 -0400
-tags: [food, learning, lifestyle]
+categories: [food, learning, lifestyle]
 ---
 
 For most of my adult life I could cook in the loosest possible sense — I could follow a recipe and produce something edible. But I didn't understand *why* anything worked. I was just executing instructions.

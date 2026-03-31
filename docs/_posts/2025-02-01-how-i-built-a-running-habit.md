@@ -2,7 +2,7 @@
 layout: post
 title: "How I Finally Built a Running Habit"
 date: 2025-02-01 07:30:00 -0500
-tags: [fitness, habits, running, mental-health]
+categories: [fitness, habits, running, mental-health]
 ---
 
 I tried to become a runner four times before it stuck. Each time I went out too fast, got too sore, missed a few days, and quietly gave up.
