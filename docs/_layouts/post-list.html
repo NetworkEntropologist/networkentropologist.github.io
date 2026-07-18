@@ -3,7 +3,13 @@ layout: default
 ---
 
 
-{% assign posts = paginator.posts | default: site.posts | where_exp: "post", "post.draft != true" | sort: "date" | reverse %}
+{% if page.category %}
+  {% assign posts = paginator.posts | default: site.posts | where_exp: "post", "post.draft != true" | where: "categories", page.category | sort: "date" | reverse %}
+{% else %}
+  {% assign posts = paginator.posts | default: site.posts | where_exp: "post", "post.draft != true" | sort: "date" | reverse %}
+{% endif %}
+
+<!-- <p>DEBUG: {{ site.posts | size }} total posts, {{ paginator.posts | size }} paginated posts</p> -->
 
 <div class="post-list">
   {% for post in posts %}

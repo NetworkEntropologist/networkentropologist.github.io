@@ -58,13 +58,15 @@
 
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="tagsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Categories
+                                    Posts
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="tagsDropdown">
                                     <li><a class="dropdown-item" href="/posts">All Posts</a></li>
-                                    {% for category in site.categories %}
+                                    <li><a class="dropdown-item" href="/technology">Technology</a></li>
+                                    <li><a class="dropdown-item" href="/projects">Projects</a></li>
+                                    <!-- {% for category in site.categories %}
                                     <li><a class="dropdown-item" href="/tags#{{ tag[0] | slugify }}">{{ category[0] }} ({{ category[1].size }})</a></li>
-                                    {% endfor %}
+                                    {% endfor %} -->
                                 </ul>
                             </li>
 

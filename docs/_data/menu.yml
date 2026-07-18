@@ -3,5 +3,9 @@ items:
     url: /
   - title: About
     url: /about
+  # - title: Technology
+  #   url: /technology
+  # - title: Projects
+  #   url: /projects
   # - title: Posts
   #   url: /posts

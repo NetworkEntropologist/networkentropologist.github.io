@@ -84,6 +84,17 @@ code {
     font-size: 0.9rem;
 }
 
+content {
+    /* styles specific to content area */
+}
+
+.content h1, .content h2, .content h3 {
+    color: var(--bs-primary);
+}
+
+.content h4, .content h5, .content h6 {
+    color: var(--bs-secondary);
+}
 
 .code-bg {
     background-color: lightgray;

@@ -5,7 +5,7 @@ title: About
 
 ## About This Site
 
-> ***The Network Entropologist (n):*** part engineer, part diagnostician, part archaeologist of other people's decisions. Reaches for the right tool, and builds it when it doesn't exist yet. Found most naturally at 02:00 in a datacentre, Sharpie in hand, making sense of something that has quietly been unravelling for years.
+> **_The Network Entropologist (n):_** part engineer, part diagnostician, part archaeologist of other people's decisions. Reaches for the right tool, and builds it when it doesn't exist yet. Found most naturally at 02:00 in a datacentre, Sharpie in hand, making sense of something that has quietly been unravelling for years.
 
 This is a place to document the work, share the thinking, and occasionally just talk where you will find a mix of:
 
@@ -47,6 +47,3 @@ This site covers a fairly broad range of topics, including:
 - **The occasional ramble** — no agenda, no apologies
 
 Thanks for stopping by.
-
-
-

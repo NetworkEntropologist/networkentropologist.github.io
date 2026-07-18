@@ -4,17 +4,23 @@ layout: default
 
 <div class="mb-1 text-muted">{{ page.date | date: "%-d %B %Y" }}</div>
 
-<h2 class="pb-4 mb-4 border-bottom">{{ page.title }}</h2>
+<h2 class="pb-2 mb-1 text-secondary">{{ page.title }}</h2>
 
+{% if page.subtitle %}
+  <h5 class="subtitle text-muted mt-1 mb-4">{{ page.subtitle }}</h5>
+{% endif %}
+
+<div class="content">
 {{content}}
+</div>
 
 <!-- Tag Formatting -->
-{% if page.tags %}
+{% if page.categories %}
   <hr class="my-5">
   <div class="mb-3">
     <!-- <small class="text-secondary">tags:</small> -->
-    {% for tag in page.tags %}
-      <a href="/tags#{{ tag | slugify }}" class="badge rounded-pill bg-secondary text-decoration-none me-1">{{ tag }}</a>
+    {% for category in page.categories %}
+      <a href="/categories#{{ category | slugify }}" class="badge rounded-pill bg-secondary text-decoration-none me-1">{{ category }}</a>
     {% endfor %}
   </div>
 {% endif %}
